@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SpaceX - Explore the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        /* Background Video */
+        #video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Main Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        /* Main Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Parallax Effect */
+        .parallax {
+            background-image: url('https://www.spacex.com/static/images/SpaceX_logo.svg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+
+        .btn {
+            background-color: #ff6600;
+            padding: 12px 30px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff8c1a;
+            transform: scale(1.1);
+        }
+
+        /* Scroll Indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #ff6600;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video id="video-bg" autoplay muted loop>
+        <source src="https://www.spacex.com/static/images/space-background.mp4" type="video/mp4">
+    </video>
+
+    <!-- Header -->
+    <header>
+        <h1>SpaceX</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#missions">Missions</a>
+            <a href="#careers">Careers</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h2>Welcome to SpaceX</h2>
+            <p>We are on a mission to explore and make space travel a reality.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+        <div class="scroll-down">↓</div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax" id="about">
+        <div>
+            <h2>About SpaceX</h2>
+            <p>SpaceX is an American private aerospace manufacturer and space transportation company.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SpaceX. All Rights Reserved.</p>
+        <p>Made with love and innovation for the future of humanity.</p>
+    </footer>
+
+</body>
+</html>
